@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate QR Code</title>
+    <!-- Include qrcode.js library from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/dist/qrcode.min.js"></script>
+</head>
+<body>
+    <div id="qrcode"></div>
+
+    <script>
+        // Your Instagram profile URL
+        var instagramUrl = "https://www.instagram.com/yourusername/";
+
+        // Generate the QR code
+        var qr = new QRCode(document.getElementById("qrcode"), {
+            text: instagramUrl,
+            width: 256,
+            height: 256,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>
